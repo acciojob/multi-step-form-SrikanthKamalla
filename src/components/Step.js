@@ -4,8 +4,8 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       {step === 1 && (
-        <>
-          <div id="step1">
+        <div id="step1">
+          <div>
             <label>First Name:</label>
             <input
               id="first_name"
@@ -23,12 +23,12 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
               required
             />
           </div>
-        </>
+        </div>
       )}
 
       {step === 2 && (
-        <>
-          <div id="step2">
+        <div id="step2">
+          <div>
             <label>Car Model:</label>
             <input id="model" value={data.model} onChange={onChange} required />
           </div>
@@ -42,12 +42,12 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
               required
             />
           </div>
-        </>
+        </div>
       )}
 
       {step === 3 && (
-        <>
-          <div id="step3">
+        <div id="step3">
+          <div>
             <label>Card Info:</label>
             <input
               id="card_info"
@@ -76,10 +76,10 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
                 : null}
             </span>
           </div>
-        </>
+        </div>
       )}
 
-      <div style={{ marginTop: "1rem" }}>
+      <div>
         {step > 1 && (
           <button type="button" onClick={prevStep}>
             Previous
