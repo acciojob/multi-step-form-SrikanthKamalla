@@ -5,7 +5,7 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
     <form onSubmit={onSubmit}>
       {step === 1 && (
         <>
-          <div>
+          <div id="step1">
             <label>First Name:</label>
             <input
               id="first_name"
@@ -28,7 +28,7 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
 
       {step === 2 && (
         <>
-          <div>
+          <div id="step2">
             <label>Car Model:</label>
             <input id="model" value={data.model} onChange={onChange} required />
           </div>
@@ -47,7 +47,7 @@ const Step = ({ step, data, onChange, nextStep, prevStep, onSubmit }) => {
 
       {step === 3 && (
         <>
-          <div>
+          <div id="step3">
             <label>Card Info:</label>
             <input
               id="card_info"
